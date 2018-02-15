@@ -1,0 +1,20 @@
+<% include header %>
+
+<h2>Add a new game!</h2>
+
+<form method= "post" role= "form">
+	<div class= "form-group">
+		<label for= "title">Game name</label>
+		<input type= "text" class= "form-control" id= "title" name= "title" placeholder= "Enter game name here!" required>
+	</div>
+	<div class= "form-group">
+		<label for= "body">Game description</label>
+		<textarea class= "form-control" id= "body" name= "body" placeholder= "Add the game description here!" rows= "3" required></textarea>
+	</div>
+	<div class= "form-group">
+		<input type="submit" value= "Post game" class= "btn btn-primary">
+	</div>
+</form>
+
+
+<% include footer %>
