@@ -1,0 +1,46 @@
+<% include header %>
+    <% if(gyms.length){ %>
+		<% gyms.forEach(function(gym){ %>
+		<div class= "panel panel-default">
+			<div class= "panel-heading">
+				    <%= gym.username %>
+				</div>
+				<div class= "panel-body">
+				    Will be at <%= gym.name %></br>
+                    <% if(gym.sTime > 12) { %>
+                       From <%= gym.sTime - 12 %>:00 PM</br>
+                    <% } else { %>
+                       From <%= gym.sTime %>:00 AM</br>
+                    <% } %>
+                    <% if(gym.eTime > 12) { %>
+                       Until <%= gym.eTime - 12 %>:00 PM</br>
+                    <% } else { %>
+                       Until <%= gym.eTime %>00 AM</br>
+                    <% } %>
+                    On the following day(s):
+                    <% if(gym.monday != "null"){ %>
+                        <%= gym.monday %>
+                    <% } %>
+                    <% if(gym.tuesday != "null"){ %>
+                        <%= gym.tuesday %>
+                    <% } %>
+                    <% if(gym.wednesday != "null"){ %>
+                        <%= gym.wednesday %>
+                    <% } %>
+                    <% if(gym.thursday != "null"){ %>
+                        <%= gym.thursday %>
+                    <% } %>
+                    <% if(gym.friday != "null"){ %>
+                        <%= gym.friday %>
+                    <% } %>
+                    <% if(gym.saturday != "null"){ %>
+                        <%= gym.saturday %>
+                    <% } %>
+                    <% if(gym.sunday != "null"){ %>
+                        <%= gym.sunday %>
+                    <% } %>
+			     </div>
+		  </div>
+		<% }) %>
+	<% } %>
+<% include footer%>

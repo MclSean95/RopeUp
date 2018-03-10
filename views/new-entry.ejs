@@ -1,19 +1,97 @@
 <% include header %>
 
-<h2>Add a new game!</h2>
+<h2>Add a new gym!</h2>
 
 <form method= "post" role= "form">
 	<div class= "form-group">
-		<label for= "title">Game name</label>
-		<input type= "text" class= "form-control" id= "title" name= "title" placeholder= "Enter game name here!" required>
+		<label for= "title">Select A Gym</label>
+		<select name = "Name" required>
+            <option></option>
+            <% if(gyms.length){ %>
+                <% gyms.forEach(function(gym){ %>
+                <option value = "<%= gym.Name %>"> <%= gym.Name %> <% })} %> </option>
+        </select>
 	</div>
-	<div class= "form-group">
-		<label for= "body">Game description</label>
-		<textarea class= "form-control" id= "body" name= "body" placeholder= "Add the game description here!" rows= "3" required></textarea>
-	</div>
-	<div class= "form-group">
-		<input type="submit" value= "Post game" class= "btn btn-primary">
-	</div>
+    
+    <div class = "form-group">
+        <h3>Pick the days you want to climb!</h3>
+    <label>Monday</label>
+        <input type = "checkbox" value= "M" name = "monday"></br>
+    <label>Tuesday</label>
+        <input type = "checkbox" value= "T" name = "tuesday"></br>
+    <label>Wednesday</label>
+        <input type = "checkbox" value= "W" name = "wednesday"></br>
+    <label>Thursday</label>
+        <input type = "checkbox" value= "TH" name = "thursday"></br>
+    <label>Friday</label>
+        <input type = "checkbox" value= "F" name = "friday"></br>
+    <label>Saturday</label>
+        <input type = "checkbox" value= "SA" name = "saturday"></br>
+    <label>Sunday</label>
+        <input type = "checkbox" value= "SU" name = "sunday"></br>
+    </div>
+
+    <div class="form-group">
+        <label for = "Start Time">Pick a start time:</label>
+        <select name = "start" required>
+            <option></option>
+            <option value="24">12:00 AM</option>
+            <option value="1">1:00 AM</option>
+            <option value="2">2:00 AM</option>
+            <option value="3">3:00 AM</option>
+            <option value="4">4:00 AM</option>
+            <option value="5">5:00 AM</option>
+            <option value="6">6:00 AM</option>
+            <option value="7">7:00 AM</option>
+            <option value="8">8:00 AM</option>
+            <option value="9">9:00 AM</option>
+            <option value="10">10:00 AM</option>
+            <option value="11">11:00 AM</option>
+            <option value="12">12:00 PM</option>
+            <option value="13">1:00 PM</option>
+            <option value="14">2:00 PM</option>
+            <option value="15">3:00 PM</option>
+            <option value="16">4:00 PM</option>
+            <option value="17">5:00 PM</option>
+            <option value="18">6:00 PM</option>
+            <option value="19">7:00 PM</option>
+            <option value="20">8:00 PM</option>
+            <option value="21">9:00 PM</option>
+            <option value="22">10:00 PM</option>
+            <option value="23">11:00 PM</option>
+        </select></br>
+        
+         <label for = "End Time">Pick an end time:</label>
+        <select name = "end" required>
+            <option></option>
+            <option value="24">12:00 AM</option>
+            <option value="1">1:00 AM</option>
+            <option value="2">2:00 AM</option>
+            <option value="3">3:00 AM</option>
+            <option value="4">4:00 AM</option>
+            <option value="5">5:00 AM</option>
+            <option value="6">6:00 AM</option>
+            <option value="7">7:00 AM</option>
+            <option value="8">8:00 AM</option>
+            <option value="9">9:00 AM</option>
+            <option value="10">10:00 AM</option>
+            <option value="11">11:00 AM</option>
+            <option value="12">12:00 PM</option>
+            <option value="13">1:00 PM</option>
+            <option value="14">2:00 PM</option>
+            <option value="15">3:00 PM</option>
+            <option value="16">4:00 PM</option>
+            <option value="17">5:00 PM</option>
+            <option value="18">6:00 PM</option>
+            <option value="19">7:00 PM</option>
+            <option value="20">8:00 PM</option>
+            <option value="21">9:00 PM</option>
+            <option value="22">10:00 PM</option>
+            <option value="23">11:00 PM</option>
+        </select>
+    </div>
+
+    <input type="submit" id = "new-entry" class="btn btn-primary" value="Add Gym">
 </form>
 
 

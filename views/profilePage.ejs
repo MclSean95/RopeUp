@@ -1,0 +1,20 @@
+<% include header %>
+
+<% if(gyms.length){ %>
+		<% gyms.forEach(function(gym){ %>
+		<div class= "panel panel-default">
+			<div class= "panel-heading">
+				<div class= "text-muted pull-right">
+					<%= name %>
+				</div>
+				<%= gym.username %>
+				</div>
+				<div class= "panel-body">
+				<%= gym.name %>
+			</div>
+		</div>
+		<% }) %>
+	<% } %>
+
+<a href="/matches">View your matches!</a>
+<% include footer%>

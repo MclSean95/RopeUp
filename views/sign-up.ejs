@@ -1,0 +1,27 @@
+<% include header %>
+	<div class = "form-group">
+		<form name = "signUpForm" action = "sign-up" method = "post" class = "form-group">
+			<label for = "Username">Username</label></br>
+			<input name = "username" placeholder = "Create Username" class = "form-row" width = "200" required></br></br>
+			<label for = "password">Password</label><br>
+			<input type ="password" name = "password" placeholder = "Create password" class = "form-row" width = "200" required></br></br>
+            <label for = "passwordVer">Re-enter password</label><br>
+			<input type ="password" name = "passwordVer" placeholder = "Re-enter password" class = "form-row" width = "200" required></br></br>
+            <label for = "email">Email</label><br>
+			<input type ="email" name = "email" placeholder = "Enter email" class = "form-row" width = "200" required></br></br>
+            <label for = "f_name">First name</label><br>
+			<input type ="f_name" name = "f_name" placeholder = "First name" class = "form-row" width = "200" required></br></br>
+            <label for = "l_name">Last name</label><br>
+			<input type ="l_name" name = "l_name" placeholder = "Last name" class = "form-row" width = "200" required></br></br>
+            <label for = "Sex">Sex</label><br>
+			<select name = "Sex" required>
+                <option value= "empty"> </option>
+                <option value = "male">M</option> 
+                <option value = "female">F</option>
+            </select>
+            <label for = "birthday">Enter birthday</label>
+            <input type="date" name = "birthday" required>
+			<input type = "submit" id = "sign Up" class = "btn btn-primary" value= "Sign Up">
+		</form>
+	</div>
+<% include footer %>

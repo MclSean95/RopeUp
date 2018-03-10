@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Game Library</title>
+		<title>Rope Up</title>
+        <h1>Rope Up:</h1>
 		<meta charset ="utf-8">
 		<link rel= "stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type= "text/css">
 	</head>
 	<body class= "container">
-		<h1>
-			Game Library
-			<a href= "/logout" class= "btn btn-primary pull-right" style = "margin-left: 10px">Logout</a>
-			<a href= "/new-entry" class= "btn btn-primary pull-right">Add game to library</a>
-		</h1>
+		<h2>
+			The Partner finding app!
+            <% if(login) { %>
+            <a href= "/logout" class= "btn btn-primary pull-right" style = "margin-left: 10px">Logout</a>
+			<a href= "/profilePage" class= "btn btn-primary pull-right" style="margin-left: 10px">Edit your profile</a>
+            <a href= "/new-entry" class= "btn btn-primary pull-right">Add a new gym</a>
+            <% } else { %>
+            <a href= "/sign-in" class= "btn btn-primary pull-right" style = "margin-left: 10px">Sign In</a>
+			<a href= "/sign-up" class= "btn btn-primary pull-right">Sign Up</a>
+            <% } %>
+		</h2>
