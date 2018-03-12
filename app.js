@@ -9,7 +9,6 @@ var session = require('express-session');
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var url = "mongodb://Sean:passW0rd@ds235768.mlab.com:35768/ropeup";
-var currUser = null;
 
 var app = express();
 
